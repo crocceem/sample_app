@@ -3,6 +3,11 @@ require 'spec_helper'
 
 RSpec.describe PagesController, type: :controller do
   render_views
+
+  before(:each) do
+    @base_title = "Simple App du Tutoriel Ruby on Rails"
+  end
+
   describe "GET #home" do
     it "returns http success" do
       get :home
@@ -11,8 +16,8 @@ RSpec.describe PagesController, type: :controller do
 
     it "devrait avoir le bon titre" do
       get :home
-      response.should have_selector("title",
-                                    :content => "Simple App du Tutoriel Ruby on Rails | Accueil")
+      response.expect have_selector("title",
+                                        :content => @base_title +" | Accueil", visible:false)
     end
   end
 
@@ -29,4 +34,14 @@ RSpec.describe PagesController, type: :controller do
       expect(response).to have_http_status(:success)
     end
   end
-end
+
+  describe "GET #help" do
+    it "returns http success" do
+      get :help
+      expect(response).to have_http_status(:success)
+    end
+  end
+ end
+
+
+
