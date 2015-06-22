@@ -21,6 +21,11 @@ RSpec.describe "LayoutLinks", type: :request do
       get '/help'
       response.expect have_selector('title',:content => "Aide")
     end
+
+    it "devrait avoir une page d'inscription à /signup " do
+      get '/signup'
+      response.should have_selector('title',:content =>"Inscription")
+    end
   end
 end
 
