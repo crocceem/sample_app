@@ -1,12 +1,13 @@
-<header>
-  <%logo= image_tag("logo.png",:alt=>"Application Exemple",:class =>"round")%>
-  <%= link_to logo, root_path%>
-  <nav class="round">
-    <ul>
-      <li><%= link_to "Accueil",root_path%></li>
-      <li><%= link_to "Aide",help_path%></li>
-      <li><%= link_to "Inscription",signup_path%></li>
+<header class="navbar navbar-fixed-top navbar-inverse">
+  <div class="container">
+    <%= link_to "sample_app", '#', id:"logo"%>
+    <nav>
+      <ul class="nav navbar-nav navbar-right">
+        <li><%= link_to "Accueil",root_path%></li>
+        <li><%= link_to "Aide",help_path%></li>
+        <li><%= link_to "Inscription",signup_path%></li>
 
-    </ul>
-  </nav>
+      </ul>
+    </nav>
+  </div>
 </header>

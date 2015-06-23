@@ -1,13 +1,6 @@
 Rails.application.routes.draw do
-<<<<<<< HEAD
-  get 'users/new'
 
-  get 'users/new'
-
-  get 'users/new'
-=======
   resources :users
->>>>>>> modeling-users
   get 'signup' => 'users#new'
 
   root 'pages#home'
