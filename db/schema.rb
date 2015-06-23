@@ -11,13 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20150623141707) do
+=======
+ActiveRecord::Schema.define(version: 20150623130641) do
+>>>>>>> modeling-users
 
   create_table "users", force: :cascade do |t|
     t.string   "nom"
     t.string   "email"
+<<<<<<< HEAD
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
+=======
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+>>>>>>> modeling-users
     t.string   "password_digest"
   end
 
